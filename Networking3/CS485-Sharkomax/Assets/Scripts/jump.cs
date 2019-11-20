@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class jump : MonoBehaviour
+public class jump : NetworkBehaviour
 {
 	private bool canJump = true;
 	Vector2 myvector = new Vector2(0, 0);
@@ -25,17 +26,18 @@ public class jump : MonoBehaviour
     void Update()
     {
 
-       
+   	 	   if (!isLocalPlayer)
+        		    return;
 		//Debug.Log(GameObject.Find("big-crate").transform.position.x);
 
 
 		//Getting cursor position and place a prefab at the position
-		if (Input.GetKeyDown("mouse 0"))
-		{
-			//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			//Instantiate(prefabObject, new Vector2(ray.origin[0], ray.origin[1]), Quaternion.identity);
-			Instantiate(prefabObject, new Vector2(GameObject.Find("big-crate").transform.position.x, GameObject.Find("big-crate").transform.position.y), Quaternion.identity);
-		}
+		//if (Input.GetKeyDown("mouse 0"))
+		//{
+		//	//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		//	//Instantiate(prefabObject, new Vector2(ray.origin[0], ray.origin[1]), Quaternion.identity);
+		//	Instantiate(prefabObject, new Vector2(GameObject.Find("big-crate").transform.position.x, GameObject.Find("big-crate").transform.position.y), Quaternion.identity);
+		//}
 		
 
         //Prevents an object from double jumping
