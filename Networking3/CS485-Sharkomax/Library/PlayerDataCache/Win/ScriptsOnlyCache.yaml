@@ -1,13 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Bullet
     - Combat
     - HealthBar
+    - PlayerMove
     - Script.BulletScript
     - Script.FireScript
-    - Shoot
     - TargetScript
-    - jump
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -58,27 +58,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 584}
     - Class: 114
-      Script: {instanceID: 9786}
+      Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 9890}
+      Script: {instanceID: 9964}
     - Class: 114
-      Script: {instanceID: 9968}
+      Script: {instanceID: 10138}
     - Class: 114
-      Script: {instanceID: 10144}
+      Script: {instanceID: 10434}
     - Class: 114
-      Script: {instanceID: 10440}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 10682}
+      Script: {instanceID: 10678}
     - Class: 114
-      Script: {instanceID: 11522}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11708}
+      Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 16028}
+      Script: {instanceID: 11706}
     - Class: 114
-      Script: {instanceID: 16192}
+      Script: {instanceID: 15334}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -120,12 +120,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Shoot
   - hash:
       serializedVersion: 2
       Hash: 5bd9a19c7b5f76c563418e28f48a561b
@@ -222,12 +216,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Propagate
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -356,6 +344,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: c7a1cfbcd815f35b6700d8538ef4094e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Combat
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -471,6 +465,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthBar
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkBehaviour
@@ -512,7 +512,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 8ffdeb6b64232c4dd2e76df1f1a74a6e
+      Hash: 827c54ac48d4814c41d4a7c4049a1837
     assemblyName: Assembly-CSharp.dll
     namespaceName: Script
     className: FireScript
@@ -524,10 +524,10 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 08d6426929c80f1b1f6a199187ff6451
+      Hash: b25a9064a2391b602a3fa4509ae9c99f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: jump
+    className: PlayerMove
   - hash:
       serializedVersion: 2
       Hash: e6ae40841db498b6e673877ac45ad208
@@ -638,16 +638,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: c7a1cfbcd815f35b6700d8538ef4094e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Combat
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: HealthBar
+    className: Bullet
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

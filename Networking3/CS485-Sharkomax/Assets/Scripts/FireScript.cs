@@ -5,6 +5,7 @@ namespace Script
 {
     public class FireScript : NetworkBehaviour
     {
+        public float speed = 30f;
 	    public GameObject bulletPrefab;
         [FormerlySerializedAs("SpawnPoint")] public GameObject spawnPoint;
         [FormerlySerializedAs("Cannon")] public GameObject cannon;
@@ -35,8 +36,7 @@ namespace Script
                  transform.position - transform.forward,
                  Quaternion.identity);
 
-            bullet.GetComponent<Rigidbody>().velocity = -transform.forward * 4;
-
+            bullet.GetComponent<Rigidbody>().AddForce(new Vector3(speed, 0, 0), ForceMode.VelocityChange);
             // spawn the bullet on the clients
             NetworkServer.Spawn(bullet);
 
