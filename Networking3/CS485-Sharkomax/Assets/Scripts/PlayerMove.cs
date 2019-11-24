@@ -9,7 +9,7 @@ public class PlayerMove : NetworkBehaviour
 	Vector2 myvector = new Vector2(0, 0);
 	public GameObject prefabObject;
 
-     public float speed = 30f;
+        public float speed = 30f;
 	    public GameObject bulletPrefab;
 	
 
@@ -29,14 +29,22 @@ public class PlayerMove : NetworkBehaviour
         // create the bullet object locally
         var bullet = (GameObject)Instantiate(
              bulletPrefab,
-                          //transform.position - transform.forward,
-                          transform.position - new Vector3 (5,0,0),
+                          transform.position - transform.forward,
+                          //transform.position - new Vector3 (5,0,0),
 
              Quaternion.identity);
-        // Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 pz = this.transform.position + Input.mousePosition;
-         pz.z = 0;
-        bullet.GetComponent<Rigidbody>().AddForce(pz/*new Vector3(speed, 0, 0)*/, ForceMode.VelocityChange);
+
+        //var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.x, this.transform.position.z));
+        //var pz = worldMousePosition - this.transform.position;
+        //pz.Normalize();
+
+
+        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 pz = worldMousePosition - this.transform.position;
+        pz.z = 0;
+        pz.x *= speed;
+        pz.y *= speed;
+        bullet.GetComponent<Rigidbody>().AddForce(pz, ForceMode.VelocityChange);
         // spawn the bullet on the clients
         NetworkServer.Spawn(bullet);
 

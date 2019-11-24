@@ -70,15 +70,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10678}
     - Class: 114
-      Script: {instanceID: 11180}
+      Script: {instanceID: 11030}
     - Class: 114
-      Script: {instanceID: 11520}
+      Script: {instanceID: 11182}
     - Class: 114
-      Script: {instanceID: 11554}
+      Script: {instanceID: 11522}
     - Class: 114
-      Script: {instanceID: 11706}
+      Script: {instanceID: 11556}
     - Class: 114
-      Script: {instanceID: 15334}
+      Script: {instanceID: 11708}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -416,6 +416,12 @@ ScriptsOnlyBuild:
     className: InputField
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bullet
+  - hash:
+      serializedVersion: 2
       Hash: c9a8b80298a116835b51ba1cf9284367
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -638,10 +644,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 83e769eee07fc231384c812eedbb8224
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Bullet
+    className: CameraFollow
+  - hash:
+      serializedVersion: 2
+      Hash: 3946cabca29bee079c09abf04e01bc63
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityLibrary
+    className: Follow2D
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
