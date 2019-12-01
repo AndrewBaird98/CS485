@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\MCESC\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\MCESC\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Alien Character.1081707597.00" t="ExcludeRecursive" />
+    <e p="D:\Unity_Projects\GameDev\Alien Character" t="IncludeRecursive">
+      <e p="Alien Character.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="CameraMovement.cs" t="Include" />
+        <e p="Character_Behavior.cs" t="Include" />
+        <e p="CharacterBehavior.cs" t="Include" />
+        <e p="Player" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="FiringArm.cs" t="Include" />
+            <e p="GenericWeapon.cs" t="Include" />
+            <e p="GizmoSphere.cs" t="Include" />
+            <e p="Projectile.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
