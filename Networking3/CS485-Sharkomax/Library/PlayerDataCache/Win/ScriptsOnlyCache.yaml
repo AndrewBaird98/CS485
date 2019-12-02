@@ -2,18 +2,27 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Bullet
+    - Character_Behavior
     - Combat
+    - FiringArm
+    - GizmoSphere
     - HealthBar
     - PlayerMove
-    - Script.BulletScript
-    - Script.FireScript
-    - TargetScript
+    - Projectile
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -24,7 +33,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Networking.NetworkManagerHUD
     - UnityEngine.Networking.NetworkTransform
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/CombinedScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -33,52 +42,52 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
-    - Class: 65
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 584}
     - Class: 114
-      Script: {instanceID: 9886}
+      Script: {instanceID: 9888}
     - Class: 114
-      Script: {instanceID: 9964}
+      Script: {instanceID: 9966}
     - Class: 114
-      Script: {instanceID: 10138}
+      Script: {instanceID: 10610}
     - Class: 114
-      Script: {instanceID: 10434}
+      Script: {instanceID: 10680}
     - Class: 114
-      Script: {instanceID: 10608}
+      Script: {instanceID: 11034}
     - Class: 114
-      Script: {instanceID: 10678}
+      Script: {instanceID: 11186}
     - Class: 114
-      Script: {instanceID: 11030}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 11182}
+      Script: {instanceID: 11712}
     - Class: 114
-      Script: {instanceID: 11522}
+      Script: {instanceID: 15036}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 15038}
     - Class: 114
-      Script: {instanceID: 11708}
+      Script: {instanceID: 15040}
+    - Class: 114
+      Script: {instanceID: 15046}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -138,6 +147,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollow
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -410,6 +425,12 @@ ScriptsOnlyBuild:
     className: NetworkStartPosition
   - hash:
       serializedVersion: 2
+      Hash: 3946cabca29bee079c09abf04e01bc63
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityLibrary
+    className: Follow2D
+  - hash:
+      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -530,7 +551,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: b25a9064a2391b602a3fa4509ae9c99f
+      Hash: db8274efb8379ce0622c961016d066f6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMove
@@ -644,17 +665,47 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 83e769eee07fc231384c812eedbb8224
+      Hash: 68cfe88d6140243617c0db5a0b9b9de9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CameraFollow
+    className: Projectile
   - hash:
       serializedVersion: 2
-      Hash: 3946cabca29bee079c09abf04e01bc63
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityLibrary
-    className: Follow2D
+    namespaceName: 
+    className: GizmoSphere
+  - hash:
+      serializedVersion: 2
+      Hash: 557c793cd78506ffe9d471aa73756fcf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FiringArm
+  - hash:
+      serializedVersion: 2
+      Hash: a1527141015f9884848f274120dd2ffa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraMovement
+  - hash:
+      serializedVersion: 2
+      Hash: bd467fe73f1db5f7d1e984b84ac26a8e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GenericWeapon
+  - hash:
+      serializedVersion: 2
+      Hash: fe620fb991076e04c3b166ea2b2fe431
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Character_Behavior
+  - hash:
+      serializedVersion: 2
+      Hash: 947e42992c27a4cb2e2e2b10516d21cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterBehavior
   platform: 5
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/CombinedScene.unity
   playerPath: F:/github/CS485/Networking3/CS485-Sharkomax/Build/CS485-Sharkomax.exe

@@ -7,7 +7,7 @@ public class PlayerMove : NetworkBehaviour
 {
 	private bool canJump = true;
 	Vector2 myvector = new Vector2(0, 0);
-	public GameObject prefabObject;
+	//public GameObject prefabObject;
 
         public float speed = 30f;
 	    public GameObject bulletPrefab;
