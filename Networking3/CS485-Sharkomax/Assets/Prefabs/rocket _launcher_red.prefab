@@ -230,10 +230,11 @@ MonoBehaviour:
   anglePoint: {fileID: 8552907949027566254}
   shotPoint: {fileID: 8552907947637840718}
   bullet: {fileID: 0}
-  power: 300
+  power: 30
   recoil: 1
   rate: 1
-  hold: 1
+  hold: 0
+  character: {fileID: 0}
 --- !u!114 &-8159522377388861
 MonoBehaviour:
   m_ObjectHideFlags: 0

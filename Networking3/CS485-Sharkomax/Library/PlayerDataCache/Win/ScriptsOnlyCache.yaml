@@ -31,6 +31,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Networking.NetworkManager
     - UnityEngine.Networking.NetworkManagerHUD
     - UnityEngine.Networking.NetworkTransform
+    - UnityEngine.Networking.NetworkTransformChild
   sceneClasses:
     Assets/Scenes/CombinedScene.unity:
     - Class: 1
@@ -87,6 +88,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11266}
     - Class: 114
       Script: {instanceID: 11574}
+    - Class: 114
+      Script: {instanceID: 11720}
     - Class: 114
       Script: {instanceID: 11726}
     - Class: 115
@@ -402,7 +405,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 557c793cd78506ffe9d471aa73756fcf
+      Hash: 647dd3022c25bee4648c9251f21df668
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FiringArm
@@ -522,7 +525,7 @@ ScriptsOnlyBuild:
     className: HealthBar
   - hash:
       serializedVersion: 2
-      Hash: f526b7c1fcd2b3f3199b62f5086d7146
+      Hash: 3f66c106d741f92a339a2d2d4ed2600f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GenericWeapon

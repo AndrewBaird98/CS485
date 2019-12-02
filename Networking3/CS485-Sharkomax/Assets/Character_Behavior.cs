@@ -87,15 +87,19 @@ public class Character_Behavior : NetworkBehaviour
     }
 
     [Command]
-    void CmdDoShoot(GameObject bullet)
+    public void CmdDoShoot(GameObject bullet)
     {
-       
+        //if (!isLocalPlayer)
+        //    return;
         Destroy(bullet, 5f);
         NetworkServer.Spawn(bullet);
 
     }
    
-
+    public bool CheckClient()
+    {
+        return isLocalPlayer;
+    }
 
 }
 

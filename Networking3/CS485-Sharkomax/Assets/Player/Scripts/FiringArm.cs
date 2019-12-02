@@ -11,10 +11,11 @@ public class FiringArm : MonoBehaviour
 {
     [FormerlySerializedAs("EndPoint")] [NotNull] public GameObject endPoint;
     [FormerlySerializedAs("Weapon")] public GenericWeapon weapon;
+    public Character_Behavior character;
 
     // Start is called before the first frame update
     void Start() {
-        
+       
     }
 
 
@@ -41,6 +42,9 @@ public class FiringArm : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+
+        if (!character.CheckClient())
+            return;
         //if (!isLocalPlayer)
           //  return;
         RotateArm();
@@ -48,7 +52,7 @@ public class FiringArm : MonoBehaviour
 
         bool click = Input.GetMouseButton(0);
         if (weapon) {
-           //this.GetComponent<NetworkIdentity>().AssignClientAuthority(this.GetComponent<NetworkIdentity>().connectionToClient);
+           
             weapon.SHOT(!click);
             float Recoil = GenericWeapon._recoil;
 

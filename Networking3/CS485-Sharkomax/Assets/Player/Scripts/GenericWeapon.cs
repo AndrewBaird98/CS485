@@ -17,7 +17,7 @@ public class GenericWeapon : MonoBehaviour
     [FormerlySerializedAs("recoil")] public float recoil;
     [FormerlySerializedAs("rate of fire")] public float rate;
     [FormerlySerializedAs("hold type")] public bool hold;
-
+    public Character_Behavior character;
 
     private float _timer;
     private float _shotPower;
@@ -89,7 +89,8 @@ public class GenericWeapon : MonoBehaviour
             _shotPower = power / 100;
             transform.RotateAround(anglePoint.transform.position, Vector3.forward, Recoil);
 
-            Character_Behavior.Shoot(newBullet);
+            character.CmdDoShoot(newBullet);
+            //Character_Behavior.CmdDoShoot(newBullet);
             
         }
     }
