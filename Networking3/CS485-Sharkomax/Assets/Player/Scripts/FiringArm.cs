@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
-
+//using UnityEngine.Networking;
 public class FiringArm : MonoBehaviour
 {
     [FormerlySerializedAs("EndPoint")] [NotNull] public GameObject endPoint;
@@ -41,13 +41,18 @@ public class FiringArm : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        //if (!isLocalPlayer)
+          //  return;
         RotateArm();
         PlaceWeapon();
 
         bool click = Input.GetMouseButton(0);
         if (weapon) {
-            float recoil = weapon.SHOT(!click);
-            transform.Rotate(0, 0, recoil);
+           //this.GetComponent<NetworkIdentity>().AssignClientAuthority(this.GetComponent<NetworkIdentity>().connectionToClient);
+            weapon.SHOT(!click);
+            float Recoil = GenericWeapon._recoil;
+
+            transform.Rotate(0, 0, Recoil);
             PlaceWeapon();
         }
 

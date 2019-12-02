@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Serialization;
+//using UnityEngine.Networking;
 
 public class GenericWeapon : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class GenericWeapon : MonoBehaviour
     [FormerlySerializedAs("Angle Point")] [NotNull] public GameObject anglePoint;
     [FormerlySerializedAs("Shot Point")] [NotNull] public GameObject shotPoint;
 
-    [FormerlySerializedAs("Bullet")] [NotNull] public Projectile bullet;
+    [FormerlySerializedAs("Bullet")] [NotNull] public GameObject bullet;
     [FormerlySerializedAs("power")] public float power;
     [FormerlySerializedAs("recoil")] public float recoil;
     [FormerlySerializedAs("rate of fire")] public float rate;
@@ -20,6 +21,7 @@ public class GenericWeapon : MonoBehaviour
 
     private float _timer;
     private float _shotPower;
+    public static float _recoil;
     private bool _charge;
     void Start() {
         _timer = 0.0f;
@@ -64,20 +66,32 @@ public class GenericWeapon : MonoBehaviour
         return false;
     }
 
-    public float SHOT(bool release) {
+    
+    public void SHOT(bool release)
+    {
+        float Recoil;
         var shotPos = shotPoint.transform.position;
         var anglePos = anglePoint.transform.position;
         Vector3 shotLine = shotPos - anglePos;
-
         if (_timer <= 1 / rate || !getPower(release))
-            return 0.0f;
-        var newBullet = Instantiate(bullet, shotPoint.transform.position, Quaternion.FromToRotation(Vector3.up, shotLine));
-        newBullet.GetComponent<Rigidbody2D>().AddForce(25  * _shotPower * shotLine.normalized);
-        _timer = 0.0f;
-        float shotRecoil = _shotPower * recoil;
-        _shotPower = power / 100;
-        transform.RotateAround(anglePoint.transform.position, Vector3.forward, shotRecoil);
-        return shotRecoil;
+        {
+            Recoil = 0.0f;
+            _recoil = 0.0f;
+        }
+        else
+        {
+            var newBullet = (GameObject)Instantiate(bullet, shotPoint.transform.position, Quaternion.FromToRotation(Vector3.up, shotLine));
+            newBullet.GetComponent<Rigidbody2D>().AddForce(25 * _shotPower * shotLine.normalized);
+            _timer = 0.0f;
+
+            Recoil = _shotPower * recoil;
+            _recoil = Recoil;
+            _shotPower = power / 100;
+            transform.RotateAround(anglePoint.transform.position, Vector3.forward, Recoil);
+
+            Character_Behavior.Shoot(newBullet);
+            
+        }
     }
 
 

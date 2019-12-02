@@ -66,16 +66,36 @@ public class Character_Behavior : NetworkBehaviour
 		rb.velocity += new Vector2(0, maxJump);
 	}
 
-	void OnCollisionEnter2D(Collision2D col){
-		if(col.gameObject.CompareTag("Ground")){
-			isGrounded = true;
-		}
-	}
+    //void OnCollisionEnter2D(Collision2D col){
+    //if(col.gameObject.CompareTag("Ground")){
+    //		isGrounded = true;
+    //	}
+    //}
 
-	void OnCollisionExit2D(Collision2D col){
-		if(col.gameObject.CompareTag("Ground")){
-			isGrounded = false;
-		}
-	}
+    //void OnCollisionExit2D(Collision2D col){
+    //	if(col.gameObject.CompareTag("Ground")){
+    //		isGrounded = false;
+    //	}
+    //}
+
+    public static void Shoot(GameObject bullet)
+    {
+       
+      Character_Behavior Instance = new Character_Behavior();
+      Instance.CmdDoShoot(bullet);
+
+    }
+
+    [Command]
+    void CmdDoShoot(GameObject bullet)
+    {
+       
+        Destroy(bullet, 5f);
+        NetworkServer.Spawn(bullet);
+
+    }
+   
+
+
 }
 

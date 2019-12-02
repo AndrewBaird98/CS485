@@ -229,8 +229,8 @@ MonoBehaviour:
   grabpoint: {fileID: 8552907948588959864}
   anglePoint: {fileID: 8552907949027566254}
   shotPoint: {fileID: 8552907947637840718}
-  bullet: {fileID: 3804442310396430814, guid: a6634613ebfd4224bb79bb793614135d, type: 3}
-  power: 30
+  bullet: {fileID: 0}
+  power: 300
   recoil: 1
   rate: 1
   hold: 1

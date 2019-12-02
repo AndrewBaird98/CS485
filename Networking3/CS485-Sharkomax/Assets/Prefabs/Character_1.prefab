@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &6578829948194842935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759862783149826768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a56e8e71e84a364b84be61afc1e5930, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endPoint: {fileID: 3492543773178834940}
-  weapon: {fileID: 1759862783149826771}
 --- !u!1 &3492543773178834940
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +224,6 @@ GameObject:
   - component: {fileID: 2622895673419060584}
   - component: {fileID: 6576892162910233769}
   - component: {fileID: -4098631798221911838}
-  - component: {fileID: -2234279878119483465}
   m_Layer: 0
   m_Name: Character_1
   m_TagString: Untagged
@@ -324,7 +309,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020867765, y: -0.5055184}
+  m_Offset: {x: -0.0024061203, y: -0.36705184}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -335,7 +320,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.160698, y: 3.2689638}
+  m_Size: {x: 1.5299397, y: 3.545897}
   m_EdgeRadius: 0
 --- !u!50 &3492543773972075874
 Rigidbody2D:
@@ -489,20 +474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
---- !u!114 &-2234279878119483465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3492543773972075877}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a56e8e71e84a364b84be61afc1e5930, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endPoint: {fileID: 3492543773178834940}
-  weapon: {fileID: 0}
 --- !u!1 &3492543774439007932
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 3492543773178834940}
-  weapon: {fileID: 0}
+  weapon: {fileID: 1759862783149826771}
 --- !u!1001 &7988894903392161440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -574,6 +545,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: rocket _launcher_red
       objectReference: {fileID: 0}
+    - target: {fileID: 8552907949449489523, guid: 2aefc83b396f76047abd9b918da15ab5,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1819975537826206348, guid: a6634613ebfd4224bb79bb793614135d,
+        type: 3}
     - target: {fileID: 8552907949449489525, guid: 2aefc83b396f76047abd9b918da15ab5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -644,14 +621,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8552907947637840688, guid: 2aefc83b396f76047abd9b918da15ab5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.57
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -8159522377388861, guid: 2aefc83b396f76047abd9b918da15ab5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2aefc83b396f76047abd9b918da15ab5, type: 3}
---- !u!1 &1759862783149826768 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8552907949449489520, guid: 2aefc83b396f76047abd9b918da15ab5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7988894903392161440}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1759862783149826773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8552907949449489525, guid: 2aefc83b396f76047abd9b918da15ab5,
@@ -664,7 +641,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7988894903392161440}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759862783149826768}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85aea52b93d9656489414fab9c47a308, type: 3}

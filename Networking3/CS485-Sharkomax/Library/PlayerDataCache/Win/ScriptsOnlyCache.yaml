@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - Character_Behavior
     - Combat
     - FiringArm
+    - GenericWeapon
     - GizmoSphere
     - HealthBar
     - PlayerMove
@@ -18,10 +19,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -65,29 +64,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 584}
     - Class: 114
-      Script: {instanceID: 9888}
+      Script: {instanceID: 9866}
     - Class: 114
-      Script: {instanceID: 9966}
+      Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10610}
+      Script: {instanceID: 9968}
     - Class: 114
-      Script: {instanceID: 10680}
+      Script: {instanceID: 10436}
     - Class: 114
-      Script: {instanceID: 11034}
+      Script: {instanceID: 10614}
     - Class: 114
-      Script: {instanceID: 11186}
+      Script: {instanceID: 10684}
     - Class: 114
-      Script: {instanceID: 11560}
+      Script: {instanceID: 10726}
     - Class: 114
-      Script: {instanceID: 11712}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 15036}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 15038}
+      Script: {instanceID: 11198}
     - Class: 114
-      Script: {instanceID: 15040}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 15046}
+      Script: {instanceID: 11574}
+    - Class: 114
+      Script: {instanceID: 11726}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -159,6 +160,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 68cfe88d6140243617c0db5a0b9b9de9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Projectile
   - hash:
       serializedVersion: 2
       Hash: 72712369a7c681ad84fc255a5ec0b333
@@ -332,6 +339,12 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: GizmoSphere
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: TargetScript
   - hash:
       serializedVersion: 2
@@ -389,10 +402,22 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 557c793cd78506ffe9d471aa73756fcf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FiringArm
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: a1527141015f9884848f274120dd2ffa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraMovement
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -497,10 +522,22 @@ ScriptsOnlyBuild:
     className: HealthBar
   - hash:
       serializedVersion: 2
+      Hash: f526b7c1fcd2b3f3199b62f5086d7146
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GenericWeapon
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: fe620fb991076e04c3b166ea2b2fe431
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Character_Behavior
   - hash:
       serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
@@ -513,6 +550,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 947e42992c27a4cb2e2e2b10516d21cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterBehavior
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -663,48 +706,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 68cfe88d6140243617c0db5a0b9b9de9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Projectile
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GizmoSphere
-  - hash:
-      serializedVersion: 2
-      Hash: 557c793cd78506ffe9d471aa73756fcf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FiringArm
-  - hash:
-      serializedVersion: 2
-      Hash: a1527141015f9884848f274120dd2ffa
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraMovement
-  - hash:
-      serializedVersion: 2
-      Hash: bd467fe73f1db5f7d1e984b84ac26a8e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GenericWeapon
-  - hash:
-      serializedVersion: 2
-      Hash: fe620fb991076e04c3b166ea2b2fe431
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Character_Behavior
-  - hash:
-      serializedVersion: 2
-      Hash: 947e42992c27a4cb2e2e2b10516d21cb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CharacterBehavior
   platform: 5
   scenePathNames:
   - Assets/Scenes/CombinedScene.unity
